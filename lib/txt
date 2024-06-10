@@ -1,0 +1,210 @@
+SpinKitSpinningLines
+SpinKitWaveSpinner
+SpinKitDoubleBounce
+SpinKitPouringHourGlassRefined
+SpinKitRipple++
+
+
+
+/*import 'package:flutter/material.dart';
+import 'package:quiz_versiyon1/models/quiz_sorular.dart';
+import 'package:quiz_versiyon1/quiz_service.dart';
+
+class SoruEkrani extends StatefulWidget {
+  final String categoryId;
+  final String altkategoriId;
+
+  const SoruEkrani({Key? key, required this.categoryId, required this.altkategoriId}) : super(key: key);
+
+  @override
+  _SoruEkraniState createState() => _SoruEkraniState();
+}
+
+class _SoruEkraniState extends State<SoruEkrani> {
+  late Future<List<Quiz>> _sorular;
+  int _soruIndex = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    _sorular = QuizService().getQuestionsByCategory(widget.categoryId, widget.altkategoriId);
+  }
+
+  void _sonrakiSoruyaGec() {
+     
+    setState(() {
+      _soruIndex++;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Sorular'),
+      ),
+      body: FutureBuilder<List<Quiz>>(
+        future: _sorular,
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return Center(child: CircularProgressIndicator());
+          } else if (snapshot.hasError) {
+            return Center(child: Text("Bir hata oluştu: ${snapshot.error}"));
+          } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
+            return Center(child: Text("Sorular bulunamadı"));
+          } else {
+            final sorular = snapshot.data!;
+            final quiz = sorular[_soruIndex];
+
+            return Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Text(
+                  quiz.soru,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 24),
+                ),
+                SizedBox(height: 20),
+                ...quiz.secenekler.map((secenek) {
+                  return ElevatedButton(
+                    onPressed: () {
+                      // Seçeneğe tıklama işlemleri burada gerçekleştirilebilir
+                    },
+                    child: Text(secenek),
+                  );
+                }).toList(),
+                SizedBox(height: 20),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    ElevatedButton(
+                      onPressed: _sonrakiSoruyaGec,
+                      child: Text('Sonraki Soru'),
+                    ),
+                  ],
+                ),
+              ],
+            );
+          }
+        },
+      ),
+    );
+  }
+}*/
+
+
+
+/*import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+class SoruEkrani extends StatefulWidget {
+
+  const SoruEkrani({super.key, required this.altkategoriId, required this.categoryId});
+  final String altkategoriId;
+  final String categoryId;
+  @override 
+  State<StatefulWidget> createState() {
+    return _SoruEkraniState();
+  }
+
+
+
+}
+  
+class _SoruEkraniState extends State<SoruEkrani> {
+
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.blueAccent,
+      appBar: AppBar(
+        title: Text(
+          'Quizzly',
+          style: GoogleFonts.rubikVinyl(
+            textStyle: const TextStyle(
+              fontSize: 20,
+              color: Colors.white,
+              fontWeight: FontWeight.w400
+            )
+          ),
+          ),
+          backgroundColor: Colors.blueAccent,
+          shadowColor: Colors.transparent,
+      ),
+      body: Container(
+        margin: const EdgeInsets.all(30),
+        width: double.infinity,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            const Text(
+              'Sorunun bulunacağı kısım',
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+              ),
+            const SizedBox(height: 50,),
+            ElevatedButton(
+              onPressed: () {},
+              child: Text('Cevap 1'),
+            ),
+            const SizedBox(height: 10,),
+            ElevatedButton(
+              onPressed: () {},
+              child: Text('Cevap 1'),
+            ),
+            const SizedBox(height: 10,),
+            ElevatedButton(
+              onPressed: () {},
+              child: Text('Cevap 1'),
+            ),
+            const SizedBox(height: 10,),
+            ElevatedButton(
+              onPressed: () {},
+              child: Text('Cevap 1'),
+            ),
+            const SizedBox(height: 100,),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                SizedBox(
+                  width: 130,
+                  height: 50,
+                  child: ElevatedButton(onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.green,
+                    
+                  ),
+                  child: const Text(
+                    'Sonraki Soru',
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                    )),
+                ),
+                const SizedBox(width: 10,),
+                SizedBox(
+                  width: 130,
+                  height: 50,
+                  child: ElevatedButton(onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.red,
+                  ), 
+                  child: const Text(
+                    'Quizi Bitir',
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                    )),
+                )
+              ],
+
+            )
+          ],
+        )
+      ),
+    );
+  }
+}*/
