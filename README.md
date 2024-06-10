@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Quiz_App
 Flutter quiz aplication with firebase (firestore)
 
@@ -26,4 +26,3 @@ Kategoriler (Collection)
   |           |-- ...
 =======
 
->>>>>>> 034ddca8b4e45203c9246d4dd65237d1e0e36149
