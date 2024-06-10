@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Quiz_App
 Flutter quiz aplication with firebase (firestore)
 
@@ -23,3 +24,6 @@ Kategoriler (Collection)
   |           |-- soru2 (Document)
   |           |-- soru3 (Document)
   |           |-- ...
+=======
+
+>>>>>>> 034ddca8b4e45203c9246d4dd65237d1e0e36149
